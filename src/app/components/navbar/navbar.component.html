@@ -2,7 +2,6 @@
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-xl">Dan.dev</h1>
 
-    <!-- Hamburger -->
     <button class="md:hidden focus:outline-none" (click)="toggleMenu()">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -10,7 +9,6 @@
       </svg>
     </button>
 
-    <!-- Desktop nav -->
     <ul class="hidden md:flex gap-6">
       <li><a href="#" class="hover:text-blue-400">Home</a></li>
       <li><a href="#about" class="hover:text-blue-400">About</a></li>
@@ -19,7 +17,6 @@
     </ul>
   </div>
 
-  <!-- Mobile nav slide-in -->
   <div
     class="fixed top-0 right-0 h-full w-2/3 sm:w-1/3 bg-gray-800 text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden shadow-lg"
     [ngClass]="{ 'translate-x-0': isMenuOpen, 'translate-x-full': !isMenuOpen }"
