@@ -1,0 +1,43 @@
+<!-- <nav class="sticky top-0 z-50 flex justify-between items-center p-5 bg-gray-900 text-white">
+    <h1 class="font-bold text-xl">Dan.dev</h1>
+    <ul class="hidden md:flex gap-6">
+        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+    </ul>
+</nav>   -->
+
+<nav class="sticky top-0 z-50 bg-gray-900 text-white px-5 py-4">
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-xl">Dan.dev</h1>
+  
+      <!-- Hamburger button (visible on mobile) -->
+      <button class="md:hidden focus:outline-none" (click)="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex gap-6">
+        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  
+    <!-- Mobile Nav -->
+    <ul 
+      class="md:hidden flex flex-col mt-4 space-y-3 transition-all duration-300 ease-in-out"
+      [ngClass]="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }"
+    >
+      <li><a href="#" (click)="closeMenu()" class="block hover:text-blue-400">Home</a></li>
+      <li><a href="#about" (click)="closeMenu()" class="block hover:text-blue-400">About</a></li>
+      <li><a href="#projects" (click)="closeMenu()" class="block hover:text-blue-400">Projects</a></li>
+      <li><a href="#contact" (click)="closeMenu()" class="block hover:text-blue-400">Contact</a></li>
+    </ul>
+  </nav>
+  
